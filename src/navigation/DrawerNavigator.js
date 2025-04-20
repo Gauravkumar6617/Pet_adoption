@@ -10,7 +10,18 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator initialRouteName="Main">
+    <Drawer.Navigator
+    initialRouteName="Main"
+    screenOptions={{
+     
+      headerStyle: {
+       
+        elevation: 0, // removes shadow on Android
+        shadowOpacity: 0, // removes shadow on iOS
+      },
+   
+    }}
+  >
   
       <Drawer.Screen name="Main" component={BottomTab} options={{ title: 'Home' }} />
 
